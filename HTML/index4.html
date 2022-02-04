@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTILOS CSS :: Desafio Latam</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /*3 formas de dar estilo*/
+        /*por elemento (por etiqueta)*/
+        /*FF 00 00 -> 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F*/
+        /*RGB DESDE 0 A 255 PARA CADA COLOR*/
+        
+        p {
+            /*
+            color: red;
+            color: green;
+            color: blue;
+            color: #ff0000;
+            color: #00ff00;
+            color: #0000ff;
+            color:rgb(255,0,0);
+            color:rgb(0,255,0);*/
+            /*color de letras*/
+            color: rgb(0, 0, 255);
+            /*color de fondo de las letras*/
+            background-color: rgb(255, 0, 0);
+            font-size: 12px;
+        }
+        /*color por la clase, uno o varios elementos*/
+        
+        .pcolores {
+            color: rgb(255, 255, 0);
+            font-size: 35px;
+        }
+        /*color de elemento único*/
+        
+        #parra3 {
+            color: rgb(255, 0, 255);
+            font-size: 50px;
+        }
+        
+        #divisor {
+            background-color: lightblue;
+        }
+        
+        #divisor1 {
+            height: 200px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Título 1</h1>
+    <div id="divisor">
+        <div id="divisor1" class="pcolores"></div>
+        <p>Parrafo 1</p>
+        <p class="pcolores">Parrafo 2</p>
+        <p class="pcolores" id="parra3">Parrafo 3</p>
+        <p class="pcolores">Parrafo 4</p>
+    </div>
+</body>
+
+</html>
