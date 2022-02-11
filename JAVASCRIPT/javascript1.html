@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //comentarios
+        /*comentarios 
+        extensos*/
+        //El tipo de dato es definido por su contenido
+        var uno_numero = 1;
+        var uno_texto = 1;
+
+        //mensaje en consola
+        console.log("Hola mundo");
+        console.log(uno_numero);
+        console.log(uno_texto);
+
+        //mensaje de alerta al cargar la página
+        //alert("Clase de javascript");
+
+        //scanner
+        //mensaje -> prompt("Ingresa tu nombre: ");
+        //asignar a variable nombre -> var nombre = prompt("Ingresa tu nombre: ");
+
+        /*var nombre = prompt("Ingresa tu nombre: ");
+        var apellido = prompt("Ingresa tu apellido: ");
+        var edad = prompt("Ingresa tu edad: ");
+        console.log("Hola " + nombre + " " + apellido + ", de edad " + edad);
+
+        var numero1 = parseInt(prompt("Ingresa numero 1: "));
+        var numero2 = prompt("Ingresa numero 2: ");
+        numero2 = parseInt(numero2);//si no se convierte a Int queda como texto y se concatena al + con otro numero o texto
+        console.log(numero1+numero2);
+        //resultado de la suma como aviso al cargar la pantalla
+        //alert(numero1+numero2);
+
+        //1+2+true = 4 (true -> 1)
+        //1+2+false = 3 (false -> 0)
+*/
+
+        /*
+                var numero1 = parseInt(prompt("Ingresa numero 1: "));
+                var numero2 = parseInt(prompt("Ingresa numero 2: "));
+                var promedio = (numero1 + numero2) / 2;
+                console.log("EL promedio es: " + promedio);*/
+
+        /*var pulgada = prompt("Ingrese el valor a convertir");
+        var resultado = parseInt(pulgada) * 0.254;
+        console.log("El resultado es: " + resultado);*/
+
+        //variable constante durante todo el código
+        //const anio = 2022;
+
+        /*document.write("Algo");
+        document.write("Hola " + nombre + " " + apellido + ", de edad " + edad);
+        document.write("<br>");*/
+
+        //formato a variables (negrita<b>, cursiva<i> y subrayado<u>)
+        /*var nombre = prompt("Ingresa tu nombre: ");
+        var apellido = prompt("Ingresa tu apellido: ");
+        var edad = prompt("Ingresa tu edad: ");
+        document.write("Hola <b>" + nombre + "</b><i> " + apellido + "</i>, de edad <u>" + edad + "</u>");
+        */
+
+        /*
+                //operacion matemática con resultado en el documento
+                var pulgada = prompt("Ingrese el valor a convertir");
+                //document.write("El resultado es: " + parseInt(pulgada) * 0.254);
+
+                //resultado operado y mostrado como alerta
+                alert("El resultado es: " + parseInt(pulgada) * 0.254);
+        */
+
+        /*CONCATENACION DENTRO DE LA ALERTA
+        var pulgada = prompt("Ingrese el valor a convertir");
+        var resultado = parseInt(pulgada) * 0.254;
+        alert(`El resultado es ${resultado}`);
+        */
+
+
+        /*COMPARACION DE VALORES
+        //Comparacion parcial (sueltamente iguales)
+        if(1=="1")
+        console.log("Son iguales"); //se imprime, se parecen
+        else
+        console.log("No son iguales");
+
+        //Comparacion absoluta (estrictamente iguales)
+        if(1==="1")
+        console.log("Son iguales"); 
+        else
+        console.log("No son iguales");//se imprime, NO son iguales, no son del mismo tipo (numero, string)
+        */
+
+        /*COMPARACION DE VARIABLES
+        var x = 20;
+        var z = 13;
+
+        if((x-z))>(z-x)){
+            console.log("x.z es mayo");
+        }
+        */
+
+        /*SWITCH - CASE*/
+
+        var pulgada = prompt("Ingrese el valor a convertir");
+        var resultado = parseInt(pulgada) * 0.254;
+
+        switch (resultado) {
+            case 3.54:
+                console.log("mayor a 10");
+                break;
+            case 0.762:
+                console.log("menor a 10");
+                break;
+            case 0.508:
+                console.log("igual a 0.508");
+                break
+            default:
+                console.log("ninguna de las anteriores");
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
