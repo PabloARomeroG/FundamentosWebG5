@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <script>
+        /*function sumaTres() {
+
+                                                                            var num1 = parseInt(prompt('Ingrese un numero: '));
+                                                                            var num2 = parseInt(prompt('Ingrese segundo numero: '));
+                                                                            var num3 = parseInt(prompt('Ingrese segundo numero: '));
+
+
+                                                                            console.log(`La suma de los 3 numeros es ${num1+num2+num3}`);
+                                                                                                                                                                    document.write(`La suma de los 3 numeros es ${num1+num2+num3}`);
+                                                                                                                                                                }
+
+                                                                                                                                                                sumaTres();
+                                                                                                                                                        */
+
+        /*--------------------------------------------------------------------------*/
+        /*LLAMADO POR FUNCION LLENANDO VARIABLES DENTRO DE LA FUNCION*/
+        /*function restaTres() {
+
+
+            var num1 = parseInt(prompt('Ingrese un numero: '));
+            var num2 = parseInt(prompt('Ingrese segundo numero: '));
+            var num3 = parseInt(prompt('Ingrese segundo numero: '));
+
+
+            console.log(`La suma de los 3 numeros es ${num1-num2-num3}`);
+            document.write(`La suma de los 3 numeros es ${num1-num2-num3}`);
+        }
+
+        restaTres();
+        */
+
+
+        /*LLAMADO POR FUNCION LLENANDO VARIABLES FUERA DE LA FUNCION*/
+        /*
+        var radio = parseInt(prompt("Ingrese radio del cilindro: "));
+        var altura = parseInt(prompt("Ingrese altura del cilindro: "));
+        volumenCilindro(radio, altura);
+
+        function volumenCilindro(radio, altura) {
+
+            //PI * radio ^ 2 * altura;
+            alert("El volumen del cilindro es " + Math.PI * Math.pow(radio, 2) * altura);
+        }
+        */
+        /*LLAMADO POR CONSTANTE*/
+        /*const suma3 = function() {
+            var num1 = parseInt(prompt('Ingrese un numero: '));
+            var num2 = parseInt(prompt('Ingrese segundo numero: '));
+            var num3 = parseInt(prompt('Ingrese segundo numero: '));
+
+            return num1 + num2 + num3;
+        }
+
+        console.log("El resultado de la suma de 3 numeros es: " + suma3());
+        */
+
+
+
+        /*
+                const num1 = parseInt(prompt('Ingrese un numero: '));
+                var num2 = parseInt(prompt('Ingrese segundo numero: '));
+                var num3 = parseInt(prompt('Ingrese segundo numero: '));
+
+                function sumaTres(num2, num3) {
+
+                    console.log(`la suma de los tres numeros es: ${num1+num2+num3}`);
+                }
+
+                sumaTres();
+        */
+
+
+        /*
+                suma3(num1, num2, num3);
+                const num1 = 4;
+                var num2 = parseInt(prompt('Ingrese segundo numero: '));
+                var num3 = parseInt(prompt('Ingrese segundo numero: '));
+
+
+                const suma3 = function(num1, num2, num3) {
+
+                    return num1 + num2 + num3;
+                }
+        */
+
+
+        //predecir la salida de los siguientes 10 fragmentos de código;
+        //1
+        function a() {
+            console.log('hola');
+        }
+        console.log('Chao');
+        //respta: "Chao"
+
+        //2
+        function b() {
+            console.log('hola');
+            return15;
+        }
+        var x = b();
+        console.log('x es', x);
+        //respta: 
+
+        //3
+        function a(n) {
+            console.log('n es', n);
+            return n + 15;
+        }
+        var x = a(3); //x vale 18 al llamar a la funcion a con el valor 3
+        console.log('x es', x); // 'x es 18'
+        //respta: 'n es 3', 'x es 18'
+
+        //4
+        var z = 15;
+        console.log(z);
+
+        function a(z) {
+            console.log(z);
+            return z;
+        }
+        var b = a(10);
+        console.log(b);
+        console.log(z);
+        //respta:imprime 15, imprime 10, imprime 10, imprime 15
+
+        //5
+        var c = 15;
+        console.log(c);
+
+        function d(c) {
+            console.log(c);
+            return c * 2;
+        }
+        var e = d(10);
+        console.log(e);
+        console.log(c);
+        //respta:imprime 15, imprime 10, resultado 20, imprime 15 
+
+        //6
+        function a(n) {
+            console.log('n es', n);
+            y = n * 2;
+            return y;
+        }
+        var x = a(3) + a(5);
+        console.log('x es', x);
+        //respta:imprime 3, imprime 5, resultado 16
+
+
+        //7
+        function x(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(x(2, 3))
+        console.log(x(3, 5))
+            //respta: resultado 5, resultado 8
+
+
+        //8
+        function y(num1, num2) {
+            console.log(num1);
+            return num1 + num2;
+        }
+        console.log(y(2, 3))
+        console.log(y(3, 5))
+            //respta:imprime 2, resultado 5-----imprime 3, resultado 8
+
+
+        //9
+        function z(a, b) {
+            var c = a + b;
+            console.log('c es', c);
+            return c;
+        }
+        var x = z(2, 3) + z(3, 5);
+        console.log('x es', x);
+        //respta:imprime 5, imprime 8, resultado --> 5+8=13
+
+
+        //10
+        function d(a, b) {
+            var c = a + b;
+            console.log('c es', c);
+            return c;
+        }
+        var x = d(2, 3) + d(3, d(2, 1)) + d(d(2, 1), d(2, 3));
+        console.log('x es', x);
+        //imprime 5, consola 3, imprime 6, consola 3, imprime 5, consola 8, consola 19
+
+
+        /*PASO DE VALORES POR PARÁMETROS O VARIABLES*/
+        //
+        /*
+        var r = 5;
+        function rr(r) {
+            console.log(r);
+        }
+        rr(4);
+
+        //
+        var r = 5;
+        function rr(r) {
+            console.log(r);
+        }
+        rr(4);
+
+        var r = 5;
+        function rr(r) {
+            var r = 3;
+            console.log(r);
+        }
+        rr();
+        */
+
+
+        /*FUNCIONES Y CICLOS - DÍA 1 - APOYO LECTURA - PÁGINA 15*/
+        /*
+        var lenguaje = "Javascript";
+
+        function miFuncion() {
+            console.log(lenguaje);
+            var lenguaje = "NodeJS";
+            console.log(lenguaje);
+        }
+
+        miFuncion();
+        console.log(lenguaje);
+        */
+
+        /*const = valor fijo, var = variable, let = variable interna de una funcion*/
+        function miFuncion() {
+            let miVariable = 4;
+
+            function potencia() {
+                return miVariable * miVariable;
+            }
+            return potencia();
+        }
+
+        let resultado = miFuncion();
+        console.log(resultado);
+        //la funcion potencia no es visible porque está definida dentro de miFuncion
+        resultado = potencia();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
