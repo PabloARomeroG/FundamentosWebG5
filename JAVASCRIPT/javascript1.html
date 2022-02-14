@@ -12,13 +12,15 @@
         /*comentarios 
         extensos*/
         //El tipo de dato es definido por su contenido
-        var uno_numero = 1;
+        /*var uno_numero = 1;
         var uno_texto = 1;
+        */
 
         //mensaje en consola
-        console.log("Hola mundo");
+        /*console.log("Hola mundo");
         console.log(uno_numero);
         console.log(uno_texto);
+        */
 
         //mensaje de alerta al cargar la página
         //alert("Clase de javascript");
@@ -107,24 +109,270 @@
         */
 
         /*SWITCH - CASE*/
+        /*
+                var pulgada = prompt("Ingrese el valor a convertir");
+                var resultado = parseInt(pulgada) * 0.254;
 
-        var pulgada = prompt("Ingrese el valor a convertir");
-        var resultado = parseInt(pulgada) * 0.254;
+                switch (resultado) {
+                    case 3.54:
+                        console.log("mayor a 10");
+                        break;
+                    case 0.762:
+                        console.log("menor a 10");
+                        break;
+                    case 0.508:
+                        console.log("igual a 0.508");
+                        break
+                    default:
+                        console.log("ninguna de las anteriores");
+                        break;
+                }*/
 
-        switch (resultado) {
-            case 3.54:
-                console.log("mayor a 10");
+        /*SIWTCH - CASE : DÍA DE LA SEMANA
+        var dia = prompt("Ingrese un número del 1 al 7");
+        dia = parseInt(dia);
+
+        switch (dia) {
+            case 1:
+                console.log("Día Lunes");
+                document.write("Día Lunes");
                 break;
-            case 0.762:
-                console.log("menor a 10");
+            case 2:
+                console.log("Día Martes");
+                document.write("Día Martes");
                 break;
-            case 0.508:
-                console.log("igual a 0.508");
-                break
+            case 3:
+                console.log("Día Miércoles");
+                document.write("Día Miércoles");
+                break;
+            case 4:
+                console.log("Día Jueves");
+                document.write("Día Jueves");
+                break;
+            case 5:
+                console.log("Día Viernes");
+                document.write("Día Viernes");
+                break;
+            case 6:
+                console.log("Día Sábado");
+                document.write("Día Sábado");
+                break;
+            case 7:
+                console.log("Día Domingo");
+                document.write("Día Domingo");
+                break;
             default:
-                console.log("ninguna de las anteriores");
+                console.log("Día no encontrado");
                 break;
         }
+        */
+
+        /*
+        var dia = prompt("Ingrese un número del 1 al 7");
+        dia = parseInt(dia);
+
+        switch (dia) {
+            case 1:
+                console.log("ENERO");
+                document.write("ENERO");
+                break;
+            case 2:
+                console.log("FEBRERO");
+                document.write("FEBRERO");
+                break;
+            case 3:
+                console.log("MARZO");
+                document.write("MARZO");
+                break;
+            case 4:
+                console.log("ABRIL");
+                document.write("ABRIL");
+                break;
+            case 5:
+                console.log("MAYO");
+                document.write("MAYO");
+                break;
+            case 6:
+                console.log("JUNIO");
+                document.write("JUNIO");
+                break;
+            case 7:
+                console.log("JULIO");
+                document.write("JULIO");
+                break;
+            case 8:
+                console.log("AGOSTO");
+                document.write("AGOSTO");
+                break;
+            case 9:
+                console.log("SEPTIEMBRE");
+                document.write("SEPTIEMBRE");
+                break;
+            case 10:
+                console.log("OCTUBRE");
+                document.write("OCTUBRE");
+                break;
+            case 11:
+                console.log("NOVIEMBRE");
+                document.write("NOVIEMBRE");
+                break;
+            case 12:
+                console.log("DICIEMBRE");
+                document.write("DICIEMBRE");
+                break;
+            default:
+                console.log("Día no encontrado");
+                document.write("Día no encontrado");
+                break;
+        }*/
+
+        //EN VEZ DE IF ANIDADOS
+        /*    if ((edad >= 18) && (edad <= 40) && (region == 12 || region == 15)) {
+
+            }
+        */
+
+        /*
+        var edad = parseInt(prompt("Ingrese su edad"));
+        var respuesta = prompt("¿Quieres estudiar en Desafío Latam");
+        respuesta = respuesta.toUpperCase();
+
+        if ((respuesta == "SI") && (edad >= 18)) {
+            console.log("Bienvenido a Desafío Latam");
+        } else if ((respuesta == "SI") && (edad < 18)) {
+            console.log("Qué bueno, pero debes estar acompañado por tu representante");
+            document.write("Qué bueno, pero debes estar acompañado por tu representante");
+        } else if (respuesta == "NO") { //NO CONSIDERA LA EDAD AUNQUE SE HAYA INGRESADO
+            console.log("Qué lástima, te esperamos pronto");
+            document.write("Qué lástima, te esperamos pronto");
+        } else {
+            console.log("Datos errados");
+            document.write("Datos errados");
+        }
+        */
+
+
+        //for (var i = 0; i < 11; i++) {
+        //  console.log(/*texto usando variable adentro->*/`6x${i}` + "=" + 6 * i)/*<-operacion matemática*/;
+        //}
+
+
+        //var numero = parseInt(prompt("Ingrese numero de la tabla de multiplicar"));
+
+        //for (var i = 0; i < 11; i++) {
+        ///    console.log( /*texto usando variable adentro->*/ `${numero}x${i}` + "=" + numero * i) /*<-operacion matemática*/ ;
+        // }
+
+        //for (var i = 0; i < 11; i++) {
+        //    console.log( /*usando variables adentro->*/ `${numero * i}` + "=" + numero * i) /*<-operacion matemática*/ ;
+
+        /*CICLO WHILE*/
+        /*
+        var numero = parseInt(prompt("Ingrese el numero "));
+
+        while (numero <= 20) {
+            if (numero % 2 == 0) {
+                console.log(numero);
+            }
+            numero++;
+        }
+        */
+
+        /*CICLO DO-WHILE*/
+        /*var numero = parseInt(prompt("Ingrese el numero "));
+
+        var numero = 0;
+        do {
+            if (numero % 2 == 0) {
+                console.log(numero);
+            }
+            numero++;
+        } while (numero <= 20);
+        */
+
+        /*IMPARES*/
+        /* var contadorImpares = 0;
+         var sumaImpares = 0;
+
+         for (var i = 1; i <= 50; i++) {
+             if (i % 2 != 0) { //impar
+                 sumaImpares = sumaImpares + i;
+                 contadorImpares++;
+             }
+         }
+         console.log(`la suma de los ${contadorImpares} números impares es: ${sumaImpares}`);
+         */
+
+        /*PARES*/
+        /*var contadorPares = 0;
+        var sumaPares = 0;
+
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 != 1) { //par
+                sumaPares = sumaPares + i;
+                contadorPares++;
+            }
+        }
+        console.log(`la suma de los ${contadorPares} números pares es: ${sumaPares}`);
+    */
+
+        /*FUNCIONES*/
+        /*
+        var edad = parseInt(prompt("Ingrese su edad"));
+
+        function nombreFuncion(edad) {
+            document.write("Hola, tu edad es: " + edad);
+            console.log(`Hola, tu edad es: ${edad}`);
+
+        }
+
+        nombreFuncion(edad);
+        */
+
+        /*LLENADO DE DATOS DESDE AFUERA*/
+
+        /*
+        var nombre = prompt("Ingrese su nombre");
+        var apellido = prompt("Ingrese su apellido");
+        var edad = parseInt(prompt("Ingrese su edad"));
+
+        function nombreFuncion(nombre, apeliido, edad) {
+
+            document.write(`Hola ${nombre}  ${apellido}, tienes ${edad} años`);
+            console.log(`Hola, tu edad es: ${edad}`);
+
+        }
+
+        nombreFuncion(nombre, apellido, edad);
+*/
+
+        /*LLENADO DE DATOS DESDE AFUERA*/
+        /*function nombreFuncion() {
+
+            var nombre = prompt("Ingrese su nombre");
+            var apellido = prompt("Ingrese su apellido");
+            var edad = parseInt(prompt("Ingrese su edad"));
+
+            document.write(`Hola ${nombre}  ${apellido}, tienes ${edad} años`);
+            console.log(`Hola, tu edad es: ${edad}`);
+
+        }
+
+        nombreFuncion();
+        */
+
+        var num1 = parseInt(prompt("Ingrese numero 1"));
+        var num2 = parseInt(prompt("Ingrese numero 2"));
+        var num3 = parseInt(prompt("Ingrese numero 3"));
+
+        function sumaNumeros(numero1, numero2, numero3) {
+            var suma = numero1 + numero2 + numero3;
+            return suma;
+            //return numero1 + numero2 + numero3;
+        }
+
+        var resultadoSuma = sumaNumeros(num1, num2, num3);
+        document.write(`El resultado de la suma es: ${resultadoSuma}`);
     </script>
 </head>
 
