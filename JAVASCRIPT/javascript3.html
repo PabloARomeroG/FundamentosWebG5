@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Calcular la suma de todos los términos almacenados en una variable con los datos del tipo arreglo, del 1 al 9*/
+        /*
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        function sumaArreglo() {
+            var suma = 0;
+            for (var i = 0; i < numeros.length; i++) {
+                suma = suma + numeros[i];
+            }
+            console.log(suma);
+
+        }
+        sumaArreglo();
+        */
+
+        /*RECURSIVIDAD*/
+        /*
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        function sumaRecursiva() {
+            //validar tamaño
+            if (numeros.length > 0) {
+                //resolver, acceder al primer elemento
+                //shift(), acceder al 1er elemento junto con su espacio de memoria y lo elimina
+                var valor = numeros.shift();
+
+                return valor + sumaRecursiva();
+            } else {
+                return 0;
+            }
+        }
+        var resultado = sumaRecursiva();
+        console.log(resultado);
+        */
+
+
+        /*Factorial de n : X! = X * (X-1)!    ejemplo 4! = 4 * (3)!*/
+        /*
+        function factorial_de_n(numero) {
+            if (numero > 1) {
+                return numero * factorial_de_n(numero - 1);
+            } else {
+                return 1;
+            }
+        }
+
+        factorial_de_n(4);
+        */
+
+        /*
+                const nums = [1, 2, 3, 5, 8, 13, 21];
+
+                function restaRecursiva() {
+                    //validar tamaño
+                    if (nums.length > 0) {
+                        //resolver, acceder al primer elemento
+                        //shift(), acceder al 1er elemento junto con su espacio de memoria y lo elimina
+                        var valor = nums.shift();
+
+                        return valor - restaRecursiva();
+                    } else {
+                        return 0;
+                    }
+                }
+                var resultado = restaRecursiva();
+                console.log(resultado);
+        */
+
+
+        /*
+                const nums = [1, 2, 3, 5, 8, 13, 21];
+
+                function restaRecursiva2() {
+
+                    var resta = 0;
+                    //validar tamaño
+                    if (nums.length > 0) {
+                        //resolver, acceder al primer elemento
+                        //shift(), acceder al 1er elemento junto con su espacio de memoria y lo elimina
+                        for (var i = 0; i < 8; i++)
+                            resta = resta - nums[i];
+
+                    return restaRecursiva2();
+                } else {
+                    return 0;
+                }
+                }
+                var resultado = restaRecursiva2();
+                console.log(resultado);
+
+                */
+
+        /*FUNCION ARROW*/
+        /*
+        var num = parseInt(prompt("Ingrese un numero entero"));
+        var resultado = 0;
+
+        let verificar = (numero) => {
+            if (numero > 0) {
+                resultado = "es positivo";
+            } else if (numero < 0) {
+                resultado = "es negativo";
+            } else if (numero === 0) {
+                resultado = "nulo";
+            } else {
+                resultado = "no es un número";
+            }
+            return resultado
+        }
+
+        alert(`El numero ingresado: ${verificar(parseInt(num))}`);
+        */
+
+
+        /*--------------------------ES5------------------------------*/
+        /*
+                var nombre = prompt('Ingrese nombre');
+                var edad = prompt('Ingrese edad');
+
+
+                let saludo = (nombre, edad) => {
+                    var mensaje = nombre;
+                    if (edad >= 18) {
+                        mensaje = mensaje + ", eres mayor de edad";
+                    } else {
+                        mensaje = mensaje + ", eres menor de edad";
+                    }
+                    return mensaje;
+                }
+                console.log("Hola, ", saludo(nombre, parseInt(edad)));
+        */
+
+        /*---------------------------ES6------------------------------*/
+
+
+        var nombre = prompt('Ingrese nombre');
+        var edad = prompt('Ingrese edad');
+
+
+        let saludo = (nombre, edad) => {
+            /*var mensaje = nombre;
+            if (edad >= 18) {
+                mensaje = mensaje + ", eres mayor de edad";
+            } else {
+                mensaje = mensaje + ", eres menor de edad";
+            }
+            */
+            let mensaje = "";
+            if (edad >= 18) {
+                mensaje = ", eres mayor de edad";
+            } else {
+                mensaje = ", eres menor de edad";
+            }
+
+            return `Hola ${nombre} ${mensaje}`;
+        }
+        console.log(saludo(nombre, parseInt(edad)));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
