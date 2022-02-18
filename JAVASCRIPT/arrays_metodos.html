@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Arrays</title>
+    <script>
+        //------------------------------------------------------------------------------- 
+        /*
+        
+        var arreglo = [];
+        console.log(arreglo, arreglo.length);
+
+        //PUSH (agrega en la última posición que encuentre vacía)
+
+        //AGREGANDO UN OBJETO DENTRO DEL ARREGLO USANDO PUSH
+        arreglo.push("a");
+        console.log(arreglo, arreglo.length);
+
+        arreglo.push("e", "i", "o", "e");
+        console.log(arreglo, arreglo.length);
+
+        //var set = new Set(arreglo); //Toma los elementos del arreglo y los pasa a la variable set, pero solamente considera el primer elemento cuando hay repetidos
+        //console.log(set);
+
+        //AGREGANDO UN OBJETO DENTRO DEL ARREGLO USANDO PUSH
+        arreglo.push({
+            nombre: 'Pablo',
+            apellido: 'Romero'
+        });
+        console.log(arreglo, arreglo.length);
+
+        //AGREGANDO UN ARREGLO DENTRO DEL ARREGLO USANDO PUSH
+        arreglo.push([1, 2, 3, 4, 5]);
+        console.log(arreglo, arreglo.length);
+*/
+
+
+
+        //-------------------------------------------------------------------------------
+        //EJERCICIO PROPUESTO - página 7 - Apoyo Lectura - Arrays y objetos (Parte II)
+        /*Partiendo el arreglo mostrado a continuación, y usando el método push, agrega los siguientes
+        objetos al arreglo: 
+
+        {raza: "Pastor Aleman", color: "marrón y negro" },
+        {raza: "Beagle", color: "blanco, marrón y negro" },
+        {raza: "Afgano", color: "negro" }
+        */
+        /*
+                let perros = [{
+                    raza: "Yorkshire Terrier",
+                    color: "marrón,negro y gris " 
+                    },{
+                    raza: "Shar Pei ", color: "marrón " 
+                    },{
+                    raza:"Schnauzer gigante",
+                    color: "negro"
+                }];
+
+                perros.push({
+                    raza: "Pastor Aleman", 
+                    color: "marrón y negro" 
+                    },{
+                    raza: "Beagle", 
+                    color: "blanco, marrón y negro" 
+                    },{
+                    raza: "Afgano", 
+                    color: "negro" 
+                    });
+
+
+                    console.dir(perros); //MOSTRAR ARREGLO COMO DIRECTORIO  //LENGHT 6
+                    perros.pop(); //ELIMINAR EL ÚLTIMO ELEMENTO
+                    console.dir(perros);  //LENGHT 5
+                    perros.shift(); //ELIMINAR EL PRIMER ELEMENTO
+                    console.dir(perros);  //LENGHT 4
+
+                    //GUARDAR EL PRIMER ELEMENTO ANTES DE ELIMINAR
+                    var eliminado = perros.shift();
+                    console.log(eliminado_SHIFT);
+                    console.dir(perros);
+
+                    //GUARDAR EL ÚLTIMO ELEMENTO ANTES DE ELIMINAR
+                    var eliminado_POP = perros.pop();
+                    console.log(eliminado_POP);
+                    console.dir(perros);
+        */
+
+        //-------------------------------------------------------------------------------
+
+        //EJERCICIO PROPUESTO - página 13 - Apoyo Lectura - Arrays y objetos (Parte II)
+
+        /*Escribe un array de cuatro (4) objetos con los siguientes
+        datos: {cuerda: "Guitarra", cantidad: 7 },{viento: "Flauta",
+        cantidad: 20 },{cuerda: "Violín", cantidad: 5 }, luego, quítale
+        el primer elemento utilizando el método shift.*/
+        /*
+                let instrumentos = [{
+                    cuerda: "Guitarra",
+                    cantidad: 7
+                }, {
+                    viento: "Flauta",
+                    cantidad: 20
+                }, {
+                    cuerda: "Violín",
+                    cantidad: 5
+                }];
+
+                instrumentos.shift();
+
+                console.dir(instrumentos);
+        */
+        //-------------------------------------------------------------------------------
+
+        //SPLIT, subdivide por caracter repetitivo (delimitador -> ;)
+        /*
+        var cliente = "juan, rodrigo;campos;37;ac@a.cl;12314452";
+        var fecha = "18/02/2022";
+
+        var arregloCliente = fecha.split(";");
+        console.log(fecha, arregloCliente);
+
+
+
+        //PASAR LOS VALORES DEL SPLIT DE arregloCliente a una variable de tipo STRING
+
+        var oCliente = {
+            nombre: arregloCliente[0],
+            apellido: arregloCliente[1],
+            edad: arregloCliente[2],
+            correo: arregloCliente[3]
+        }
+
+        console.clear();
+        console.dir(oCliente);
+
+        var arregloFecha = fecha.split("/");
+        console.log(fecha, arregloFecha);
+
+        var fecha2 = arregloFecha.join("-");
+        console.dir(fecha2);
+*/
+        //-------------------------------------------------------------------------------
+
+        //EJERCICIO PROPUESTO - página 21 - Apoyo Lectura - Arrays y objetos (Parte II)
+
+        /*Estás consumiendo una interfaz de información que
+        devuelve un listado de pokemones:
+        ["pikachu","ditto","bulbasaur"], pero los propietarios de la
+        página web donde estas realizando el trabajo necesitan
+        que el despliegue de la información sea en el título de la
+        página web, por lo que necesitas transformar en texto
+        para que quede separado por guiones (-) implementado el
+        método join.*/
+
+        /*
+        var pokemones = ["pikachu","ditto","bulbasaur"];
+        console.log(pokemones.join(" - "));
+        */
+
+        //-------------------------------------------------------------------------------
+
+        //MÉTODO MAP - Permite obtener un array procesado en base a otro array.
+
+
+        var fecha = "18/02/2022";
+        var arregloFecha = fecha.split("/");
+
+        var nueva_fecha = arregloFecha.map(function(f) {
+            console.log(f);
+
+        });
+
+        var nueva_fecha = arregloFecha.map(function(f) {
+            console.log(f);
+            //EVALUAR Y PROCESAR
+            return f;
+        });
+        console.log(nueva_fecha);
+
+        //EJERCICIO GUIADO - página 23 - Apoyo Lectura - Arrays y objetos (Parte II)
+        /*Partiendo de un arreglo que posee distintos objetos, se requiere crear un nuevo arreglo que
+        contenga toda la información de los clientes originales y que precise un nuevo elemento indicando
+        si el cliente es mayor de edad. El arreglo original es:*/
+        /*
+                var clientes = [{
+                    nombre: 'Juan',
+                    edad: 28
+                }, {
+                    nombre: 'Carlos',
+                    edad: 17
+                }, {
+                    nombre: 'Karla',
+                    edad: 27
+                }, ];
+
+                var nuevo_cliente = clientes.map(function(c) {
+                    console.dir(c);
+                    if (c.edad > 18) {
+                        c.informacion = "Mayor de edad";
+                    } else {
+                        c.informacion = "Menor de edad";
+                    }
+                    return c;
+                });
+
+                console.log(nuevo_cliente);
+                */
+
+        //--------------------------------------------------------------------------------------------
+
+        /*
+                var numeros = [10,15,20,25,30];
+                var nuevos_numeros = numeros.map(function(n){
+                console.log(n);
+                return n * 2;
+                });
+                console.log(nuevos_numeros);
+                */
+
+        //--------------------------------------------------------------------------------------------
+
+
+        //--------------------------------------POW
+        /*Utilizando el método map, crea un nuevo arreglo con el cuadrado de cada elemento del arreglo
+original. Puedes utilizar el método Math.pow()*/
+        /*
+                var numeros = [10, 15, 20, 25, 30];
+                var powNumeros = numeros.map(function(n) {
+                    return Math.pow(n, 2);
+                });
+                console.log(powNumeros);
+
+                
+        */
+        //--------------------------------------------------------------------------------------------
+
+        console.clear();
+
+        //--------------------------------------REDUCE 
+        //arreglo.reduce (callback(acumulador, valorActual[, indice[, array]]),[, valorInicial])
+
+        /*
+        var reduce = numeros.reduce(function(ac,va,ind,arr){  //no se va a utilizar el índice ni el array, se borran
+        return ac + va;
+        });
+        */
+        /*
+        var numeros = [10, 15, 20, 25, 30];
+        var reduce = numeros.reduce(function(ac, va) {
+            console.log(ac + va); //VA SUMANDO EN EL ACUMULADOR EL VALOR ACTUAL DEL ARREGLO AVANZANDO EN UN RECORRIDO PARA CADA POSICIÓN
+            return ac + va;
+
+        });
+
+        console.log(reduce);
+*/
+
+        /*
+                var pokemones = ["pikachu", "ditto", "bulbasaur"];
+                var reduce = pokemones.reduce(function(ac, va) {
+                    console.log(ac + va); //VA CONCATENANDO EN EL ACUMULADOR EL VALOR ACTUAL DEL ARREGLO AVANZANDO EN UN RECORRIDO PARA CADA POSICIÓN
+                    return ac + va;
+
+                });
+
+                console.log(reduce);
+                */
+
+
+        var clientes = [{
+            nombre: 'Juan',
+            edad: 28
+        }, {
+            nombre: 'Carlos',
+            edad: 17
+        }, {
+            nombre: 'Karla',
+            edad: 27
+        }, ];
+
+        var nombres = clientes.reduce(function(ac, va) {
+            console.log(ac, va.nombre);
+            return ac.nombre + ";" + va.nombre;
+        }, ""); // <------SE AGREGA "" PARA DEFINIR UN ESPACIO VACÍO PARA EL ACUMULADOR, 0 PARA SUMA, 1 PARA MULTIPLICACION
+        //ac = ";Juan;Carlos;Karla"
+        console.log(nombres);
+
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------FILTER
+        //Permite realizar un filtrado de objetos que se encuentran al interior de un arreglo y devolver el resultado en forma de arreglo mediante una iteración.
+
+        /*
+                var clientes = [{
+                    nombre: 'Juan',
+                    edad: 28
+                }, {
+                    nombre: 'Carlos',
+                    edad: 17
+                }, {
+                    nombre: 'Karla',
+                    edad: 27
+                }, ];
+
+                //var nuevoArreglo = arreglo.filter(callback(currentValue[,index[, array]])[, thisArg])
+                var nuevoArreglo = clientes.filter(function(cliente) {
+                    return cliente.edad >= 18;
+                });
+
+                */
+
+        /*Página 33 - Apoyo Lectura - Arrays y objetos (Parte II)*/
+        //Del siguiente arreglo, obtener sólo los trabajos donde se mantuvo más de 2 años continuos. 
+
+        var experiencias = [{
+            titulo: "Practica",
+            anos: 1,
+        }, {
+            titulo: "Programador Junior",
+            anos: 2,
+        }, {
+            titulo: "Programador Senior",
+            anos: 4,
+        }, {
+            titulo: "Jefe de proyecto",
+            anos: 5,
+        }];
+
+        var masdedos = experiencias.filter(function(exp) {
+            return exp.anos > 2;
+        });
+        console.log(masdedos);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
