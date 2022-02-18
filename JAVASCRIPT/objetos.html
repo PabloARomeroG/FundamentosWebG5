@@ -214,7 +214,9 @@ Utiliza el console.log para obtener los resultados en el navegador web. */
         alumno2.mensaje();
         */
         console.clear();
-        /*ESTE ES UN ARREGLO CON OBJETOS*/
+
+        /*
+        //ESTE ES UN ARREGLO CON OBJETOS
         function dibujar() {
             let perros = [{
                 raza: 'Pastor Alemán',
@@ -232,38 +234,59 @@ Utiliza el console.log para obtener los resultados en el navegador web. */
 
 
             //FORMA LARGA DE INGRESAR CÓDIGO HTML A TRAVÉS DEL SCRIPT
-            /*
-            body.innerHTML("<table><thead><tr><th>raza</th><th>origen</th><th>pelaje</th><th>peso</th><th>edad</th></tr></thead>" +
-                "<tbody><tr></tr></tbody>" + "</table>");
-                */
+            
+            //body.innerHTML("<table><thead><tr><th>raza</th><th>origen</th><th>pelaje</th><th>peso</th><th>edad</th></tr></thead>" +
+            //    "<tbody><tr></tr></tbody>" + "</table>");
+                
+
+
+        //PINTAR LA TABLA DE FORMA DINÁMICA
+        var body = document.getElementsByTagName("body");
+
+        body[0].innerHTML =
+            "<table>" +
+            "<thead><tr></tr></thead>" +
+            "<tbody></tbody>" +
+            "</table>";
+
 
             /*
-            //PINTAR LA TABLA DE FORMA DINÁMICA
-            var body = document.getElementsByTagName("body");
 
-            body[0].innerHTML =
-                "<table>" +
-                "<thead><tr></tr></thead>" +
-                "<tbody></tbody>" +
-                "</table>";
-            */
+        var body = document.getElementsByTagName("body");
+        //OBTENER LOS ATRIBUTOS
+        for (let atributo in perros[0]) {
+            console.log(atributo);
+        } //<th>atributo</th>
 
-            /*
+        //COLOCAR LOS ATRIBUTOS EN EL HTML
+        body[0].innerHTML =
+            "<table>" +
+            "<thead><tr id='atributo'></tr></thead>" +
+            "<tbody></tbody>" +
+            "</table>";
+*/
 
-            var body = document.getElementsByTagName("body");
-                        //OBTENER LOS ATRIBUTOS
-                        for (let atributo in perros[0]) {
-                            console.log(atributo);
-                        } //<th>atributo</th>
 
-                        //COLOCAR LOS ATRIBUTOS EN EL HTML
-                        body[0].innerHTML =
-                            "<table>" +
-                            "<thead><tr id='atributo'></tr></thead>" +
-                            "<tbody></tbody>" +
-                            "</table>";
-            */
-            //COLOCAR LOS ATRIBUTOS EN EL HTML
+
+
+        /*
+            //ESTE ES UN ARREGLO CON OBJETOS
+        function dibujar() {
+            let perros = [{
+                raza: 'Pastor Alemán',
+                origen: 'Alemania',
+                pelaje: 'Lanudo',
+                peso: '33kg',
+                edad: 12
+            }, {
+                raza: 'Poodle',
+                origen: 'Francia',
+                pelaje: 'Lanudo',
+                peso: '20kg',
+                edad: 14
+            }, ];
+            
+            //COLOCAR LOS ATRIBUTOS EN EL HTML (PINTAR LA TABLA DE FORMA DINÁMICA)
             var body = document.getElementsByTagName("body");
             body[0].innerHTML =
                 "<table>" +
@@ -272,6 +295,76 @@ Utiliza el console.log para obtener los resultados en el navegador web. */
                 "</table>";
 
             //OBTENER LOS ATRIBUTOS
+            var titulosTabla = ""; //creacion de variable para concatenar con atributo y quede acada atributo con espacio vacío al lado
+            for (let atributo in perros[0]) {
+                console.log(atributo);
+                //<th>atributo</th>
+                titulosTabla = titulosTabla + "<th>" + atributo + "</th>"; //CONCATENAR titulosTabla con atributo
+            }
+            console.log(titulosTabla);
+            var titulos = document.getElementById('atributo'); //busca en el código el id = atributo
+            titulos.innerHTML = titulosTabla; //INGRESAR LA CONCATENACION de la línea 277 en el código HTML (donde encontró el id = atributo) para que cree la tabla
+
+            //obtener los valores de los atributos
+            //<tr><td></td><td></td><td></td><td></td><td></td></tr>
+            var filas = "";
+            for (let i = 0; i < perros.length; i++) {
+                let valores = "";
+                for (let atributo in perros[i]) {
+                    perros[i].atributo
+                        //<td>atributo</td>
+                    valores = valores + "<td>" + perros[i][atributo] + "</td>";
+
+                }
+                //<tr>valores</tr>
+                filas = filas + "<tr>" + valores + "</tr>";
+            }
+            document.getElementById("tablaBody").innerHTML = filas; //INSERTADO EN EL HTML, LÍNEA 271
+*/
+
+        /*18-02-2022 - ITERANDO SOBRE OBJETOS*/
+
+        function dibujar() {
+            let perros = [{
+                raza: 'Pastor Alemán',
+                origen: 'Alemania',
+                pelaje: 'Lanudo',
+                peso: '33kg',
+                edad: 12
+            }, {
+                raza: 'Poodle',
+                origen: 'Francia',
+                pelaje: 'Lanudo',
+                peso: '20kg',
+                edad: 14
+            }, ];
+
+
+            //COLOCAR LOS ATRIBUTOS EN EL HTML
+            var body = document.getElementsByTagName("body");
+            body[0].innerHTML =
+                "<table>" +
+                "<thead><tr id='atributo'></tr></thead>" +
+                "<tbody id='tablaBody'></tbody>" +
+                "</table>";
+
+
+            //OBTENER LOS ATRIBUTOS
+
+            /*---------   ITERANDO SOBLE OBJETOS (OBJECT.KEYS), ES OTRA FORMA DE OBTENER LOS ATRIBUTOS  18-02-2022*/
+            var llaves = Object.keys(perros[0]);
+            console.log("IMPRIME llaves", llaves);
+            console.log();
+
+            /*---------   ITERANDO SOBLE OBJETOS (OBJECT.VALUES), ES OTRA FORMA DE OBTENER LOS ATRIBUTOS  18-02-2022*/
+            var valores = Object.values(perros[0]);
+            console.log("IMPRIME valores", valores);
+            console.log();
+
+            /*---------   ITERANDO SOBLE OBJETOS (OBJECT.ENTRIES), ES OTRA FORMA DE OBTENER LOS ATRIBUTOS  18-02-2022*/
+            var parValores = Object.entries(perros[0]); //CREA PEQUEÑOS ARREGLOS PARA MOSTRAR EL ATRIBUTO O KEY Y SU ELEMENTO PARA CADA POSICION
+            console.log("IMPRIME par valores (LLAVE Y VALOR)", parValores);
+
             var titulosTabla = ""; //creacion de variable para concatenar con atributo y quede acada atributo con espacio vacío al lado
             for (let atributo in perros[0]) {
                 console.log(atributo);
